@@ -1,6 +1,6 @@
 Framework: Flask
 
-Image Processing
+Image Processing:
 rembg (based on U-2-Net)
 
 Errors if encountered:
