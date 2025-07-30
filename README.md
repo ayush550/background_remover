@@ -1,3 +1,5 @@
+Run: python app.py
+
 Framework: Flask
 
 Image Processing:
