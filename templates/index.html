@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Background Remover</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Remover</title>
+  <style>
+    body {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      background: white;
+      border: 2px dashed black;
+      padding: 2rem;
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 2px solid black;
+      font-family: inherit;
+    }
+
+    select {
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-family: inherit;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
-    <h1>Remove Background from Image</h1>
+    <!-- <header>
+    📷 Image Background Remover
+    </header> -->
+    <h1>📷 Image Background Remover</h1>
     <form action="/remove_bg" method="post" enctype="multipart/form-data">
         <input type="file" name="image" accept="image/*" required>
         <button type="submit">Upload & Remove Background</button>
     </form>
+
+    <footer>
+    © 2025 Image Background Remover | by ayush chauhan | For personal use only. All rights reserved. Any misuse is discouraged.
+    </footer>
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            alert('Processing your image, please wait...');
+        });
+    </script>
 </body>
 </html>
